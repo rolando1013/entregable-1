@@ -1,6 +1,21 @@
 :root {
   --title-h2-color: #172755;
   --text-color: #8794ba;
+  --text-font-family: "Roboto";
+  --title-h2-font-family: "Roboto";
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 120px;
+  width: 1180px;
+  height: 1470px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
 
 .main__content {
@@ -12,7 +27,6 @@
   width: 1180px;
   height: 410px;
   flex: none;
-  /*order: 0;*/
   flex-grow: 0;
 }
 
@@ -25,7 +39,6 @@
   width: 480px;
   height: 232px;
   flex: none;
-  /*order: 1;*/
   flex-grow: 0;
 }
 
@@ -33,14 +46,13 @@
   width: 600px;
   height: 410px;
   flex: none;
-  /*order: 0;*/
   flex-grow: 0;
 }
 
 .div__title {
   width: 480px;
   height: 94px;
-  font-family: "Roboto";
+  font-family: var(--title-h2-font-family);
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -52,7 +64,7 @@
   color: var(--text-color);
   width: 480px;
   height: 108px;
-  font-family: "Roboto";
+  font-family: var(--text-font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -62,40 +74,38 @@
   flex-grow: 0;
 }
 
-/*For move the footer*/
-* {
-  box-sizing: border-box;
-}
-
-h4 {
-  color: blue;
-}
-
-.footer_text {
-  color: violet;
-  margin: 20px;
-}
-
-.footer_but {
-  color: #172755;
-}
-
-@media screen and (max-width: 500px) {
-  .footer {
-    display: flex;
-    overflow: scroll;
-    padding: 24px;
-    width: 300рх;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 24px;
-    border-radius: 8px;
-    gap: 12px;
+@media screen and (max-width: 480px) {
+  .main {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 60px;
+    position: absolute;
+    width: auto;
+    height: auto;
   }
 
-  .footer .card {
-    flex: 0 0 70%;
-    padding: 24px;
-    border-radius: 15px;
-    scroll-snap-align: start;
+  .main__content {
+    flex-direction: column;
+    padding: 0px;
+    gap: 30px;
+    width: auto;
+    height: auto;
+    flex: none;
+    flex-grow: 0;
+  }
+
+  .content__text {
+    gap: 20px;
+    order: 0;
+    align-self: stretch;
+  }
+
+  .content__picture {
+    width: auto;
+    height: auto;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
   }
 }
