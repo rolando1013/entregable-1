@@ -1,9 +1,63 @@
 :root {
     --main: #172755;
     --secondary: #8794BA;
-    --dark-blue: #172755;
+    /* --dark-blue: #172755; */
     --red: #EF2A82;
     --blue: #0088F0;
     --chart-line: #EEEEF7;
     --background: #E5E5E5;
+}
+
+body {
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+.header {
+    background-color: var(--main);
+    padding: 3px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 0 20px;
+    font-size: 16px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.nav__hamburger {
+    display: none;
+}
+
+.nav__link {
+    color: var(--secondary);
+    text-decoration: none;
+    margin-left: 2em;
+}
+
+.nav__cta {
+    color: var(--secondary);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.nav__cta--register {
+    border: 1px solid var(--secondary);
+    padding: 10px 53px 10px 53px;
+    border-radius: 68px;
+}
+
+@media screen and (max-width: 600px) {
+    .nav__links {
+        display: none;
+    }
+    .nav__buttons {
+        display: none;
+    }
+    .nav__hamburger {
+        display: inline-block;
+    }
 }
