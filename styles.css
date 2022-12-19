@@ -1,8 +1,10 @@
 :root {
   --title-h2-color: #172755;
+  --title-h4-color: #172755;
   --text-color: #8794ba;
   --text-font-family: "Roboto";
   --title-h2-font-family: "Roboto";
+  --title-h4-font-family: "Roboto";
 }
 
 .main {
@@ -16,6 +18,86 @@
   flex: none;
   order: 1;
   flex-grow: 0;
+}
+
+.features {
+  width: 1180px;
+  height: 381px;
+  flex: none; /*VALIDAR ESTA PROPIEDAD PARA EL RESPONSIVE*/
+  order: 0;
+  flex-grow: 0;
+}
+
+.features__title {
+  position: absolute;
+  width: 620px;
+  height: 53px;
+  left: calc(50% - 620px / 2);
+  top: 0px;
+  font-family: var(--title-h2-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  color: var(--title-h2-color);
+}
+
+.features__text {
+  position: absolute;
+  width: 1060px;
+  height: 53px;
+  left: calc(50% - 1060px / 2);
+  top: 83px;
+  font-family: var(--text-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 70px;
+  gap: 20px;
+  position: absolute;
+  width: 1180px;
+  height: 164px;
+  left: calc(50% - 1180px / 2);
+  top: 217px;
+}
+
+.icons_content {
+  width: 380px;
+  height: 164px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.icons_content__img {
+  display: block;
+  margin: auto;
+}
+
+.icons_content__title {
+  position: center;
+  font-family: var(--title-h4-font-family);
+  font-style: normal;
+  text-align: center;
+  color: var(--title-h4-color);
+}
+
+.icons_content__text {
+  position: center;
+  font-family: var(--text-font-family);
+  font-style: normal;
+  text-align: center;
+  color: var(--text-color);
 }
 
 .main__content {
